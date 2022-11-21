@@ -15,27 +15,34 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-
+/* 设置按钮 */
 .magic {
   background-color: #f9ca24;
   color: #fff;
   font-family: 'Poppins', sans-serif;
   border: 0;
   border-radius: 3px;
+  /* 水平偏移0，垂直偏移3，模糊半径，扩散半径，颜色 */
+  box-shadow: 0 3px rgba(249, 202, 36, 0.5);
   font-size: 16px;
   padding: 12px 20px;
+  /* 鼠标悬停显示手 */
   cursor: pointer;
+  /* 固定设置位置 固定定位与绝对定位相似，但元素的包含块为 viewport 视口。
+  该定位方式常用于创建在滚动屏幕时仍固定在相同位置的元素。*/
   position: fixed;
   top: 20px;
+  /* 文本间距 */
   letter-spacing: 1px;
-  box-shadow: 0 3px rgba(249, 202, 36, 0.5);
+  /* 堆叠层级 */
   z-index: 100;
 }
-
+/* 获得焦点的元素 */
 .magic:focus {
+  /* outline不占据空间 */
   outline: none;
 }
-
+/* 获得交互：按下按键和松开按键之间的时间 */
 .magic:active {
   box-shadow: none;
   transform: translateY(2px);
